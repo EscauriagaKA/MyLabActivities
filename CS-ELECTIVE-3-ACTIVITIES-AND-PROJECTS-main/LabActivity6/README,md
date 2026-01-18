@@ -1,9 +1,29 @@
-CS-ELECTIVE-3-ACTIVITIES-AND-PROJECTS COSC 111B - CS ELECTIVE 3 (INTERNET OF THINGS) (1st Sem 25-26) Laboratory Activity #6: Bidirectional Control Using Arduino and Python BSCS 4B
+# Laboratory Activity 6: Bidirectional Control Using Arduino and Python
 
-Instructor: Sir Johnroe Paulo Cañamaque (Sir Paulo)
+## Description
+This project implements a **Bidirectional (Two-Way) Communication** system. It demonstrates a closed-loop interaction where a physical input (button press) triggers a software event in Python, which then sends a control signal back to the Arduino to update the hardware state (LED toggle).
 
-Group Information: Leader
+## Circuit Design
+The system utilizes the following components:
+* **Inputs:** 3 Push buttons connected to pins 12, 11, and 10 using `INPUT_PULLUP`.
+* **Outputs:** Red, Green, and Blue LEDs connected to pins 7, 6, and 5.
+* **Control:** An Arduino Uno acting as the bridge between the physical components and the Python CLI.
 
-John Paul Fidelson Members
+![Circuit Diagram](breadboard diagram.png)
 
-Emanuel Lloyd Dagdag - 96 Kyle Andrei Escauriaga - 97 Christian Lapidez - 100 Jaye Dar Talili - 98
+## Code Logic
+The system follows a specific communication handshake:
+1. **Arduino to Python:** When a button is pressed, the Arduino sends a single character ('R', 'G', or 'B') to the Serial port.
+2. **Python Processing:** The Python script (`lab_act6.py`) listens for these characters. Upon receiving one, it prints a confirmation message and sends a numeric command ('1', '2', or '3') back to the Arduino.
+3. **Python to Arduino:** The Arduino receives the numeric command and toggles the corresponding LED state.
+4. **Reliability Features:** - **Debouncing:** A `DEBOUNCE_DELAY` of 150ms is used in the header file to prevent multiple triggers from a single button press.
+   - **Menu Handler:** A timer resets the console menu after 5 seconds of inactivity.
+
+## Group Information & Grades
+* **Instructor:** Sir Johnroe Paulo Cañamaque
+* **Leader:** John Paul Fidelson
+* **Members:**
+    * Emanuel Lloyd Dagdag — 96
+    * Kyle Andrei Escauriaga — 97
+    * Christian Lapidez — 100
+    * Jaye Dar Talili — 98
