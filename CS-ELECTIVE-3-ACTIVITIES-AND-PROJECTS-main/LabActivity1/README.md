@@ -1,29 +1,28 @@
-# Laboratory Activity #1: Working with Digital Signals 
+# Laboratory Activity 1: Working with Digital Signals 
 
-# Group Information and Grade
+## Description
+This activity demonstrates the use of **Digital Signals** and **Control Structures** (specifically `for` loops) using an Arduino Uno. The program controls an array of 5 LEDs, sequentially turning them on one by one with a 1-second delay, and then turning them off in the same sequence.
 
-**Leader** 
-- John Paul Fidelson
-  
-**Members**
-- Emanuel Lloyd Dagdag -- 97
-- Kyle Andrei Escauriaga -- 92
-- Christian Lapidez -- 100
-- Jaye Dar Talili -- 93
+## Circuit Design
+The project uses the following components:
+* Arduino Uno
+* 5 LEDs connected to Digital Pins 12, 11, 10, 9, and 8
+* Breadboard and jumper wires
 
+![Circuit Diagram](LabAct1.jpg)
 
-# Reference / Citation
-<img width="596" height="476" alt="image" src="https://github.com/user-attachments/assets/ff2851ae-4873-4d5a-9e25-9571ddd6e668" />
+## Code Logic
+1. **Initialization:** The LED pins are stored in an array and set as `OUTPUT` using a loop in the `setup()` function.
+2. **Sequential On:** A loop iterates through the pins, setting each to `HIGH` with a 1000ms delay.
+3. **Sequential Off:** A second loop iterates through the pins, setting each to `LOW` with a 1000ms delay.
 
-PDF - Arduino Guide: Working with Analog and Digital Signals
-Page 1 of 4
+## Group Members & Grades
+* **John Paul Fidelson** (Leader)
+* **Emanuel Lloyd Dagdag** — 97
+* **Kyle Andrei Escauriaga** — 92
+* **Christian Lapidez** — 100
+* **Jaye Dar Talili** — 93
 
-
-
-https://docs.arduino.cc/language-reference/en/structure/control-structure/for
-<img width="912" height="717" alt="image" src="https://github.com/user-attachments/assets/af37759f-601c-44df-a8c7-b3166411bfb1" />
-ARDUINODOCS - Control Structure
-
-
-Github Community - How to add new folder
-https://github.com/orgs/community/discussions/22534
+## References
+* [Arduino For Loop Documentation](https://docs.arduino.cc/language-reference/en/structure/control-structure/for)
+* Arduino Guide: Working with Analog and Digital Signals
