@@ -4,8 +4,8 @@
 This project implements a multi-mode light monitoring system that reacts to environmental light levels using a photoresistor. It demonstrates sophisticated state management by allowing the user to toggle between preset "Automatic" behaviors and customizable "Manual" thresholds via serial commands.
 
 ## Circuit Design
-* [cite_start]**Sensors:** Photoresistor (LDR) connected to Analog Pin `A0`[cite: 66].
-* [cite_start]**Indicators:** Three LEDs (Red, Yellow, Green) representing different intensity zones[cite: 66].
+* **Sensors:** Photoresistor (LDR) connected to Analog Pin `A0`.
+* **Indicators:** Three LEDs (Red, Yellow, Green) representing different intensity zones.
 * **Setup:** A voltage divider circuit is used to convert the variable resistance of the LDR into a readable analog voltage.
 
 
@@ -19,11 +19,11 @@ This project implements a multi-mode light monitoring system that reacts to envi
 3. [cite_start]**Data Normalization:** The system maps raw analog input (0-1023) to a human-readable percentage (0-100%) for more intuitive monitoring[cite: 78].
 
 ## Group Members & Grade
-* [cite_start]Christian Lapidez — 100 [cite: 51]
-* [cite_start]Emanuel Lloyd Dagdag — 96 [cite: 51]
-* [cite_start]Jaye Dar Talili — 98 [cite: 51]
-* [cite_start]John Paul Fidelson [cite: 51]
-* [cite_start]Kyle Andrei Escauriaga — 97 [cite: 51]
+* Christian Lapidez — 100 
+* Emanuel Lloyd Dagdag — 96 
+* Jaye Dar Talili — 98 
+* John Paul Fidelson 
+* Kyle Andrei Escauriaga — 97 
 
 ## References
 * [Arduino Map() Function](https://www.arduino.cc/reference/en/language/functions/math/map/)
